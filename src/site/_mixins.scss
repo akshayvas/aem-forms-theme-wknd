@@ -419,6 +419,16 @@
   box-shadow: 0 8px 16px 0px rgba($color: #000000, $alpha: .02);
 }
 
+@mixin repeatability-icon-default {
+  background-color: $bg-gray;
+  width: 1.75rem;
+  border: 0;
+  height: 1.75rem;
+  border-radius: 50%;
+  padding: 5px 5px;
+  cursor: pointer;
+}
+
 div[data-cmp-is="adaptiveFormTextInput"],
 div[data-cmp-is="adaptiveFormNumberInput"],
 div[data-cmp-is="adaptiveFormDatePicker"],
