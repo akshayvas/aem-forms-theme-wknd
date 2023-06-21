@@ -1,0 +1,35 @@
+.cmp-verticaltabs{
+    font-size: $font-m;
+    margin: $field-margin;
+    position: relative;
+    cursor: pointer;
+  
+  &__tabs-container{
+    display: flex;
+    margin-top: 16px;
+  }
+  &__tabpanel{
+    flex: 1;
+    padding: 16px 56px;
+  }
+  &__tablist{
+    width: 150px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  &__tab{
+    padding: 12px 4px 12px 12px;
+    margin-top: 8px;
+    text-transform: uppercase;
+    color: $unselected;
+  }
+  &__tab:hover{
+    color: $selected;
+  }
+  &__tab--active {
+    background-color: $background-color;
+    color: $selected;
+  }
+  @include description;
+}
