@@ -38,8 +38,11 @@
 
   &__containerNav {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     gap: 20px;
+    position: absolute;
+    bottom: -80px;
+    width: 100%;
   }
 
   &__nav {

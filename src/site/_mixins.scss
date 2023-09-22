@@ -4,16 +4,8 @@
   display: flex;
   flex-direction: column;
 
-  // change the label color when field is invalid
-  &:has(input:required) &__label::after,
-  &:has(select:required) &__label::after,
-  &:has(textarea:required) &__label::after,
-  div[data-cmp-required=true]>label::after {
-    content: "*";
-    color: red;
-    margin-inline-start: $space-xs;
-  }
-
+  @include required-field-style;
+  
   &[data-cmp-valid=false]>&__shortdescription {
     display: none;
   }
@@ -190,7 +182,7 @@
       position: unset;
       right: unset;
     }
-  } 
+  }
 
   &__label {
     @include label;
@@ -204,6 +196,18 @@
 
   &__errormessage {
     @include error-message
+  }
+}
+
+@mixin required-field-style {
+  &[data-cmp-required=true] &__label {
+      display: flex;
+      justify-content: flex-start;
+      column-gap: $space-xs;
+      &::after {
+          content: "*";
+          color: red;
+      }
   }
 }
 
