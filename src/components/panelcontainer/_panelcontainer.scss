@@ -13,7 +13,7 @@
   @include description;
   &__questionmark{
     top: $space-s;
-    right: $space-s
+    inset-inline-end: $space-s;
   }
 }
 
